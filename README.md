@@ -4,4 +4,6 @@ This repo serves as the hosting platform for the weekly releases of the RFPV (Ra
 
 Contributer:
 * Ruben Johann van Staden (vanStadenRJ)
+
+Supervisor:
 * Mr Herman Blackie (HermanusKB007)
