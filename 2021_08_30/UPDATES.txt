@@ -1,0 +1,24 @@
+
+==================================
+ALPHA revision 01   -   2021-08-30
+==================================
+
+This revision INTRODUCES the following functionalities:
+* Propagation Modeling
+	- Freespace Model path loss calculation capabilities
+	- Okumura-Hata Model path loss capabilities
+* ArcGIS Integration
+	- Fully integrated the SDK for Game Engines released by Esri into a standalone Unreal Engien project
+	- SDK does not provide capability of determining where in the world the character is.
+	- Using GCS WGS84 -> ECEF conversion to relate character movement to change in coordinates
+	- Character movement is now linked to changes in world latitude and longitude
+	- Distance between two actors are calculated using the Haversine formula
+	- The character location (latitude and longitude) is displayed as character moves
+* Digital Elevation Modeling
+	- No way to extract terrain height from ArcGIS layers
+	- Extract terrain elevation from .hgt files
+	- These files have to be placed in the RFPV/Content/HGT_Files folder to be used in the program 
+	- Functionality have to be added for user to add future .hgt files.
+	- As the character moves, the terrain height at current latitude and longitude is displayed.
+	
+	
