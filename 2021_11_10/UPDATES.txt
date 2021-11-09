@@ -1,0 +1,52 @@
+
+==================================
+BETA revision 01   -   2021-11-10
+==================================
+
+System Boundaries
+	- UHF Frequencies (300 - 3000 MHz)
+	- Broadcast (Isotropic) Antennas
+	- LIMITED to the Western Cape (Manually add HGT Files of other locations) - DEMO
+	- Roster Algorithm is functional, but not optimal...	
+
+This revision INTRODUCES the following functionalities:
+* Propagation Visualisation
+	- Free Space, Okumura-Hata & Longley-Rice Visualisation
+	- Utilises the Roster Algorithm
+	- Maximum roster dimensions equal to 110 times the chosen resolution
+* Signal Strength Prediction
+	- Signal strength (dBm) and Path Loss (PL) prediction
+	- Accurate to +- 2 dBm when utilising the Longley-Rice model
+* User Input
+	- Users can easily input various transmitter and propagation parameters
+	- Key Inputs:
+		P - Displays User Input Screen
+		Shift - Visualises current configuration
+		W - Moves Globe NORTH
+		S - Moves Globe SOUTH
+		A - Moves Globe WEST
+		D - Moves Globe EAST
+
+==================================
+ALPHA revision 01   -   2021-08-30
+==================================
+
+This revision INTRODUCES the following functionalities:
+* Propagation Modeling
+	- Freespace Model path loss calculation capabilities
+	- Okumura-Hata Model path loss capabilities
+* ArcGIS Integration
+	- Fully integrated the SDK for Game Engines released by Esri into a standalone Unreal Engien project
+	- SDK does not provide capability of determining where in the world the character is.
+	- Using GCS WGS84 -> ECEF conversion to relate character movement to change in coordinates
+	- Character movement is now linked to changes in world latitude and longitude
+	- Distance between two actors are calculated using the Haversine formula
+	- The character location (latitude and longitude) is displayed as character moves
+* Digital Elevation Modeling
+	- No way to extract terrain height from ArcGIS layers
+	- Extract terrain elevation from .hgt files
+	- These files have to be placed in the RFPV/Content/HGT_Files folder to be used in the program 
+	- Functionality have to be added for user to add future .hgt files.
+	- As the character moves, the terrain height at current latitude and longitude is displayed.
+	
+	
